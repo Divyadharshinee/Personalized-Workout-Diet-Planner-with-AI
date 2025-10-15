@@ -2,14 +2,13 @@ services:
   - type: web
     name: personalized-fit-app
     env: python
-    rootDir: backend
     buildCommand: |
-      cd ../frontend
+      cd frontend
       npm install
       npm run build
       cd ../backend
       pip install -r requirements.txt
-    startCommand: python app.py
+    startCommand: cd backend && python app.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.11
