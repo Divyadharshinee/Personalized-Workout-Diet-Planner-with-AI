@@ -3,7 +3,7 @@ services:
     name: personalized-fit-app
     env: python
     buildCommand: |
-      cd ../frontend
+      cd frontend
       npm install
       npm run build
       cd ../backend
@@ -16,4 +16,3 @@ services:
         sync: false
       - key: AI_API_URL
         sync: false
-    rootDir: backend
