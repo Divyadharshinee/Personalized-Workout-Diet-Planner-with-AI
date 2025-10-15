@@ -54,7 +54,6 @@ def profile():
 # 📌 MEAL PLAN GENERATION
 # ================================
 def estimate_calorie_needs(profile):
-    """Estimate daily calorie needs using Mifflin-St Jeor equation."""
     if not profile:
         return 2000
 
@@ -317,7 +316,6 @@ if __name__ == "__main__":
     print(f"✅ Frontend: {'Found (build/) ✓' if os.path.exists(STATIC_FOLDER) else 'Not found (API only mode)'}")
     print(f"✅ Database: {'Initialized ✓' if get_profile() is not None else 'Not configured'}")
     print("=" * 50)
-    print("📍 Server running at: http://localhost:5000")
-    print("📍 API endpoints at: http://localhost:5000/api/")
-    print("=" * 50)
-    app.run(host="0.0.0.0", port=5000, debug=True)
+
+    port = int(os.environ.get("PORT", 5000))  # Render dynamic port
+    app.run(host="0.0.0.0", port=port)  # Remove debug=True for production
