@@ -1,0 +1,36 @@
+# --- Python ---
+__pycache__/
+*.pyc
+instance/
+*.db
+
+# --- Virtual Environments ---
+venv/
+.env/
+.venv/
+env/
+
+# --- Environment Files ---
+.env
+.env1
+
+# --- Build & Upload Folders ---
+build/
+uploads/
+
+# --- Node / React (Frontend) ---
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# --- Logs & Temp Files ---
+*.log
+*.tmp
+*.bak
+
+# --- System / Editor Files ---
+.DS_Store
+Thumbs.db
+
+# --- Render / Setup ---
+setup-env.ps1

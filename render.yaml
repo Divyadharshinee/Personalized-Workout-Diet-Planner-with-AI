@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: personalized-fit-app
+    env: python
+    buildCommand: |
+      cd frontend
+      npm install
+      npm run build
+      cd ../backend
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: AI_API_KEY
+        sync: false
+      - key: AI_API_URL
+        sync: false
+    rootDir: backend
